@@ -1,0 +1,108 @@
+---
+title: "Property External IDs"
+description: "Understand the external identifiers that connect your property to Google Maps, AI platforms, and geographic databases."
+icon: "link"
+---
+
+# Property External IDs
+
+When you add a property to GeoTravel.ai, you can connect it to external platforms using several identifiers. These connections allow us to detect when your property appears in map results, AI responses, and other search surfaces.
+
+## Why External IDs Matter
+
+AI platforms pull information from many sources. When we can match your property across those sources, we can detect mentions that would otherwise be missed. The more identifiers you provide, the more complete your visibility picture becomes.
+
+## The Identifiers
+
+### Website (Critical)
+
+Your property's primary website URL. This is the most important identifier because it is how we detect citations in AI responses.
+
+When an AI platform generates an answer and links to a source, we match that link against your website URL. Without it, we cannot identify when AI responses cite your property.
+
+<Warning>
+Always enter your full website URL including the protocol (e.g., https://www.yourhotel.com). Make sure it matches the URL that AI platforms would link to. If your site redirects from one domain to another, use the final destination URL.
+</Warning>
+
+### Google Place ID
+
+A unique identifier assigned by Google to every place in Google Maps. It looks like a long string starting with "ChI" (e.g., ChIJN1t_tDeuEmsRUsoyG83frY4).
+
+**What it enables:**
+- Detection when your property appears in Google's AI Mode map results
+- Matching your property in Local Pack (map) results within AI Overviews
+- Accurate identification even when Google displays your name differently
+
+**How to find it:**
+1. Go to Google Maps and search for your property
+2. Click on your property listing
+3. The Place ID appears in the URL, or you can use Google's Place ID Finder tool
+
+### Google Maps CID
+
+A numeric identifier for your Google Maps listing (e.g., 1234567890123456789). This is a secondary Google identifier that provides additional matching capability.
+
+**What it enables:**
+- Backup identification when Place ID matching is inconclusive
+- Detection in older-format Google Maps links
+- Cross-referencing with Google Business Profile data
+
+**How to find it:**
+1. Open your Google Business Profile
+2. The CID appears in the URL when viewing your listing
+
+### OpenStreetMap (OSM) ID
+
+Your property's identifier in the OpenStreetMap database (e.g., node/12345678 or way/87654321).
+
+**What it enables:**
+- Geographic coordinate extraction for location-based matching
+- Cross-referencing with platforms that use OSM data
+- Proximity detection for "near me" and location-based AI queries
+
+<Tip>
+Even if you do not have an OSM ID, adding your Google Place ID and website URL covers the most important detection scenarios. OSM provides additional geographic precision but is not required.
+</Tip>
+
+### Wikidata ID
+
+Your property's identifier in Wikidata, the structured data backend of Wikipedia (e.g., Q12345).
+
+**What it enables:**
+- Matching with knowledge graph information AI platforms use
+- Detection when AI responses draw from Wikipedia-sourced data
+
+## Summary
+
+| Identifier | Priority | Primary Use |
+|------------|----------|-------------|
+| **Website** | Required | Citation detection in AI responses |
+| **Google Place ID** | Highly recommended | Map result detection in AI Mode and AI Overviews |
+| **Google Maps CID** | Recommended | Backup Google Maps matching |
+| **OSM ID** | Optional | Geographic coordinates and location matching |
+| **Wikidata ID** | Optional | Knowledge graph matching |
+
+## Map Detection in AI Responses
+
+Google's AI-generated answers sometimes include map results, both in traditional AI Overviews and in the newer AI Mode. These map results show businesses on an interactive map with listings.
+
+To detect your property in these map results, GeoTravel.ai needs at least one Google identifier:
+
+- **Google Place ID** is the most reliable way to match your property in map results
+- **Google Maps CID** serves as a fallback
+- **Website URL** can sometimes be matched against business listing links
+
+<Note>
+Map results in AI responses are becoming more common, especially for travel-related queries like "hotels near [landmark]" or "best restaurants in [city]." Having your Google Place ID configured ensures you do not miss these appearances.
+</Note>
+
+## Adding External IDs
+
+When creating or editing a property in your workspace:
+
+1. Navigate to **Properties** in your workspace
+2. Select the property you want to update (or create a new one)
+3. Fill in the external ID fields with the identifiers you have available
+4. Save your changes
+
+The system will begin using the new identifiers on the next tracking run.

@@ -1,0 +1,88 @@
+---
+title: "Inferred Search Prompts"
+description: "Reverse-engineer what users are asking AI platforms by analyzing bot behavior on your website."
+icon: "magnifying-glass"
+---
+
+# Inferred Search Prompts
+
+When someone asks an AI platform a question, the AI may send a bot to your website to gather information for its answer. Inferred Search Prompts works backward from that bot visit to figure out what the user likely asked. This reveals search demand you might not know exists.
+
+## Why This Matters
+
+You can only track keywords you already know about. But travelers ask AI platforms thousands of questions you have never thought to monitor. Inferred Search Prompts uncovers these hidden queries so you can:
+
+- Discover new keywords worth tracking
+- Understand what travelers actually want to know about your destination
+- Spot emerging trends in traveler intent before competitors do
+- Fill gaps in your keyword tracking strategy
+
+## The Three Inference Methods
+
+GeoTravel.ai uses three complementary techniques to infer what users asked:
+
+### Keyword Correlation
+
+When a bot visits your website at the same time a tracked keyword triggers an AI response mentioning your brand, we correlate the two events. This gives us high confidence about which query drove the visit.
+
+For example, if someone asks an AI "best spa hotels in Bali" and a bot visits your spa page seconds later, we can infer the connection.
+
+### URL Pattern Analysis
+
+Different types of pages attract different types of questions. By analyzing which pages bots visit, we can infer the category and intent of the original query:
+
+- Bot visits your "/rooms/presidential-suite" page -- likely a query about luxury accommodations
+- Bot visits your "/dining/restaurant-name" page -- likely a query about restaurants in your area
+- Bot visits your "/blog/best-time-to-visit" page -- likely a seasonal travel planning question
+
+### Content Fingerprinting
+
+When an AI response includes specific facts, descriptions, or details that match content on your website, we can trace those details back to the source page. This helps identify which of your content was used to answer a particular type of question, even when the bot visit happened hours or days earlier.
+
+## Confidence Levels
+
+Not all inferences are equally reliable. Each inferred prompt comes with a confidence level:
+
+<AccordionGroup>
+  <Accordion title="High Confidence">
+    Strong time correlation between a bot visit and a tracked query, with matching content between your page and the AI response. These inferences are very likely accurate.
+  </Accordion>
+
+  <Accordion title="Medium Confidence">
+    Good pattern match based on URL analysis and content overlap, but without a precise time correlation. These are probably accurate but should be validated by adding them to your tracked keywords.
+  </Accordion>
+
+  <Accordion title="Low Confidence">
+    Based primarily on page category and general content analysis. These represent educated guesses and are best used as inspiration for keyword research rather than taken at face value.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+Focus on high and medium confidence prompts first. Add them to your tracked keywords to start collecting hard data. Low confidence prompts are useful for brainstorming but should be verified before acting on them.
+</Tip>
+
+## How to Use Inferred Prompts
+
+### Discover New Keywords to Track
+
+The most immediate use is expanding your keyword list. When you see inferred prompts with high confidence that you are not already tracking, add them. You may find entire categories of traveler questions you were not monitoring.
+
+### Identify Content Gaps
+
+If inferred prompts suggest travelers are asking questions your website does not answer well, that is a content opportunity. Creating or improving pages to address these topics can improve your chances of being cited.
+
+### Spot Trends
+
+Watch for patterns in inferred prompts over time:
+
+- **Seasonal shifts**: Different questions emerge at different times of year
+- **Emerging interests**: New activities, experiences, or concerns travelers care about
+- **Competitor-related queries**: Questions comparing you to competitors reveal positioning opportunities
+
+### Validate with Tracking
+
+The best way to confirm an inferred prompt is to add it to your tracked keywords. Within one or two tracking runs, you will have real data showing whether AI platforms mention you for that query.
+
+<Note>
+Inferred Search Prompts requires Crawler Analytics to be active. The inference engine needs bot visit data to work. See [Crawler Analytics](/features/crawler-analytics) for setup details.
+</Note>

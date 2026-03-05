@@ -1,0 +1,90 @@
+---
+title: "Crawler Analytics"
+description: "Detect and analyze when AI bots visit your website, and understand what they are looking for."
+icon: "robot"
+---
+
+# Crawler Analytics
+
+Before AI platforms can recommend you, their bots need to visit your website and understand your content. Crawler Analytics shows you exactly which AI bots are visiting, what pages they look at, and how often they come back.
+
+## Which Bots Are Detected
+
+GeoTravel.ai identifies and tracks all major AI crawlers:
+
+| Bot | Operated By | Purpose |
+|-----|-------------|---------|
+| **GPTBot** | OpenAI | Powers ChatGPT responses |
+| **ClaudeBot** | Anthropic | Powers Claude responses |
+| **PerplexityBot** | Perplexity | Powers Perplexity search answers |
+| **GoogleOther** | Google | Used for AI Overview generation |
+| **Google-Extended** | Google | Gemini and AI training |
+| **Bytespider** | ByteDance | AI content indexing |
+| **CCBot** | Common Crawl | Open dataset used by many AI models |
+
+<Tip>
+New AI crawlers appear regularly. GeoTravel.ai continuously updates its detection library so you do not miss visits from emerging AI platforms.
+</Tip>
+
+## What You Learn
+
+### Which Pages Bots Visit
+
+See the exact URLs that AI bots request. This tells you what content AI platforms consider important on your site. Common patterns include:
+
+- **Homepage and about pages**: Bots gathering general brand information
+- **Room or experience pages**: Bots collecting specific product details
+- **Blog and guide content**: Bots indexing your expertise on local topics
+- **FAQ and help pages**: Bots looking for structured question-and-answer content
+
+### Visit Patterns
+
+Understand how bots navigate your site:
+
+- Do they follow internal links or arrive at specific pages directly?
+- Do they visit your site in response to specific search queries?
+- Are certain sections of your site getting more bot attention than others?
+
+### Frequency and Trends
+
+Track how often each bot visits over time:
+
+- **Increasing visits** often mean AI platforms are finding your content more relevant
+- **Decreasing visits** may signal technical issues (slow load times, blocked crawlers) or content that is becoming stale
+- **Sudden spikes** can indicate your content was recently referenced in AI responses, triggering follow-up crawls
+
+<Note>
+A bot visiting your page does not guarantee you will be cited in AI responses. But pages that are never visited by AI bots have almost no chance of being recommended. Bot visits are a necessary first step.
+</Note>
+
+## How to Use This Data
+
+### Prioritize High-Traffic Bot Pages
+
+Pages that AI bots visit frequently are your strongest assets. Make sure these pages:
+
+- Have accurate, up-to-date information
+- Include structured data (schema markup)
+- Load quickly and are free of technical errors
+- Contain the kind of specific, factual content that AI models prefer
+
+### Fix Gaps in Bot Coverage
+
+If important pages on your site are never visited by AI bots, investigate why:
+
+- Check that your robots.txt is not blocking AI crawlers
+- Ensure these pages are linked from your main navigation
+- Add internal links from pages that bots do visit
+- Improve page load speed, as bots have crawl budgets and skip slow pages
+
+### Monitor Changes After Optimization
+
+When you update content based on GeoTravel.ai recommendations, Crawler Analytics lets you see whether AI bots return to re-crawl the updated pages. This is an early signal that your changes are being picked up.
+
+## Connection to Inferred Prompts
+
+Crawler Analytics feeds directly into the [Inferred Search Prompts](/features/inferred-search-prompts) feature. By analyzing which pages bots visit and when, we can reverse-engineer what questions users are asking AI platforms that lead bots to your content.
+
+<Warning>
+Blocking AI crawlers in your robots.txt will prevent AI platforms from accessing your content. If you want to appear in AI-generated answers, make sure GPTBot, ClaudeBot, PerplexityBot, and GoogleOther are allowed to access your site.
+</Warning>
