@@ -1,29 +1,16 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "GeoTravel.ai",
+  "name": "Geo Platform Docs",
   "colors": {
-    "primary": "#2563EB",
-    "light": "#60A5FA",
-    "dark": "#1D4ED8"
+    "primary": "#334155",
+    "light": "#64748B",
+    "dark": "#1E293B"
   },
   "favicon": "/favicon.svg",
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Dashboard",
-        "href": "https://geomaestros.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Get Started",
-      "href": "https://geomaestros.com"
-    }
   },
   "navigation": {
     "tabs": [
@@ -74,10 +61,5 @@
         ]
       }
     ]
-  },
-  "footer": {
-    "socials": {
-      "website": "https://geomaestros.com"
-    }
   }
 }
