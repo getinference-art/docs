@@ -14,56 +14,50 @@ Impact Tracking follows a simple three-step process:
 
 ### 1. Baseline Capture
 
-When you start tracking a set of keywords or apply a recommendation, we automatically capture your current performance across all key metrics. This snapshot becomes your "before" measurement.
+When you mark a recommendation as done, we capture your current performance across the tracked metrics at that moment. This snapshot becomes your "before" measurement. Nothing is captured until you mark the action done.
 
 ### 2. Continuous Monitoring
 
-Over the following 30 days, we track the same metrics at regular intervals. Every tracking run captures fresh data so you can see trends forming in real time.
+From then on we re-measure the same metrics every day, indefinitely, for as long as the action stays open. There is no fixed measurement window: AI engines can start citing a page weeks or months after you change it, and we keep counting.
 
-### 3. Impact Report
+### 3. Before and After
 
-At the end of the measurement period, you get a clear report showing what changed, by how much, and whether the change is statistically meaningful.
+At any point you can see what changed and by how much, comparing today's numbers against the baseline. When you are finished with an action, archive it and we stop measuring it.
 
 ## What Gets Measured
 
-Impact Tracking monitors six core metrics:
+Impact Tracking monitors four metrics:
 
 <AccordionGroup>
+  <Accordion title="URL citations">
+    How many AI answers cite the specific page you changed. This is the sharpest signal that a content change landed, because it is scoped to the exact URL rather than your whole site.
+  </Accordion>
+
+  <Accordion title="AI-referred visits">
+    Cumulative visits to that page from AI surfaces since you took the action. Requires Crawler Analytics to be active.
+  </Accordion>
+
+  <Accordion title="Brand mentions">
+    The raw number of AI answers that mention your brand. Useful for spotting trends even when Share of Voice stays flat.
+  </Accordion>
+
   <Accordion title="Share of Voice (SOV)">
     The percentage of tracked AI responses that mention your brand. This is the single most important indicator of your overall AI visibility.
   </Accordion>
-
-  <Accordion title="Mention Count">
-    The raw number of times your brand appears across all tracked AI responses. Useful for spotting trends even when SOV stays flat due to market growth.
-  </Accordion>
-
-  <Accordion title="Average Position">
-    Where your brand typically appears within an AI response. Being mentioned first carries more weight than being listed fifth.
-  </Accordion>
-
-  <Accordion title="Citation Rate">
-    How often AI responses link back to your website when mentioning your brand. Citations drive direct traffic and signal strong authority.
-  </Accordion>
-
-  <Accordion title="Competitor Gap">
-    The difference between your visibility and your closest competitors. Tracks whether you are gaining ground or falling behind relative to others in your market.
-  </Accordion>
-
-  <Accordion title="Content Quality Score">
-    How thoroughly and accurately AI platforms describe your brand. A high score means AI responses include rich, relevant details rather than just a passing mention.
-  </Accordion>
 </AccordionGroup>
 
-## The 30-Day Timeline
+Reddit experiments track a slightly different set, scoped to the post you are watching: whether your post has been cited, by which engines, and for which prompts.
 
-Impact Tracking uses a 30-day window by default. Here is why:
+## How Long to Wait
 
-- **Days 1-7**: AI platforms may not have re-crawled your updated content yet. Early data establishes the baseline.
-- **Days 7-14**: Changes typically start appearing as AI models incorporate new information.
-- **Days 14-30**: Trends stabilize and you can see the sustained impact of your changes.
+There is no fixed measurement window, but the shape of the change is usually the same:
+
+- **Early on**: AI platforms may not have re-crawled your updated content yet. The baseline is what matters here.
+- **After a week or two**: changes typically start appearing as AI models incorporate new information.
+- **Beyond that**: trends stabilize and you can see the sustained impact of your changes.
 
 <Tip>
-You can start a new impact tracking period at any time. If you make a second round of changes midway through, consider starting a fresh measurement so the data stays clean.
+You can start tracking a new action at any time. If you make a second round of changes to the same page, record that as its own action so the two do not blur together.
 </Tip>
 
 ## Trusting the Results
@@ -71,8 +65,10 @@ You can start a new impact tracking period at any time. If you make a second rou
 Not all changes in metrics are meaningful. Impact Tracking helps you separate signal from noise:
 
 - **Trend direction**: A metric that moves consistently in one direction over multiple data points is more reliable than a single spike.
-- **Magnitude**: Small fluctuations (under 2-3%) are common and may just reflect normal variation in how AI generates responses.
-- **Consistency across queries**: If your SOV improves on most tracked keywords rather than just one or two, the improvement is likely real.
+- **Magnitude**: Small fluctuations are common and may just reflect normal variation in how AI generates responses.
+- **Consistency across prompts**: If your SOV improves on most tracked prompts rather than just one or two, the improvement is likely real.
+
+These are judgement calls for you to make. The platform reports the before and after numbers; it does not run a statistical significance test on them.
 
 <Note>
 AI responses are not deterministic. The same query can produce slightly different answers each time. Impact Tracking accounts for this by averaging across multiple observations rather than relying on single data points.
@@ -80,7 +76,7 @@ AI responses are not deterministic. The same query can produce slightly differen
 
 ## Getting Started
 
-1. Navigate to your workspace dashboard.
-2. Apply a recommendation or make changes to your content.
-3. Impact Tracking begins automatically with your next tracking run.
-4. Check the Impact tab after 7 days for early signals, and again at 30 days for the full picture.
+1. Open **Actions** in your workspace sidebar.
+2. Make the change to your content, or post the Reddit thread.
+3. Mark the recommendation as done. That is what captures the baseline and starts measurement, a tracking run on its own does not start anything.
+4. Come back to **Actions** after a week or so for early signals, and keep checking: the numbers carry on updating until you archive the action.

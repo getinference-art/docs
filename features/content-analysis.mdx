@@ -41,7 +41,7 @@ A low relevance score means your online content is not signaling to AI that you 
 
 When your brand IS mentioned, how much space and prominence does it get? A brand can be mentioned but barely visible (low influence) or can dominate the response (high influence).
 
-This metric combines your share of the response length with the presence of credibility signals like statistics, quotes, and citations near your mentions.
+This metric is your share of the response, weighted by position: how many words the AI spends on your brand as a fraction of the whole answer, with earlier words counting for more.
 
 **How to read it:** Even if you are mentioned, a tiny reference among 2,000 words has minimal impact on a traveler's decision. This tells you whether AI is giving you meaningful coverage or just a passing mention.
 
@@ -51,7 +51,7 @@ The arrow next to your Position-Adjusted Word Count compares your recent perform
 
 - **Up arrow (green)** - Recent responses show more visibility than older ones
 - **Down arrow (red)** - Recent responses show less visibility
-- **Flat line (gray)** - No significant change
+- **Flat line (gray)** - Recent and earlier responses scored identically
 
 ---
 
@@ -59,11 +59,13 @@ The arrow next to your Position-Adjusted Word Count compares your recent perform
 
 These three indicators are based on published GEO research showing that specific content types dramatically boost AI visibility. The impact percentages come from the original research.
 
+All three are measured across the whole AI response, not just the sentences around your brand, and across every tracked response rather than only the ones that mention you. Read them as a picture of what the AI is rewarding in your category, not as a score for your own page.
+
 ### Statistics (+41.2% visibility improvement)
 
-The percentage of AI responses mentioning your brand that also include numbers, data, or statistics nearby.
+The percentage of all tracked AI responses that contain numbers or data anywhere in the response.
 
-**What counts:** Percentages, room counts, guest numbers, square footage, prices, star ratings, and numerical ratings.
+**What counts:** A number followed by `%`, the word `percent`, or one of `visitors`, `rooms`, `kilometers`, `miles`, `minutes`, `hours`, `days`, `years`, or a currency symbol (€, $, £). Square footage and star ratings on their own do not match.
 
 **Why it matters:** Numbers and data points are the single highest-impact content signal. AI models prefer citing sources that provide concrete, verifiable data.
 
@@ -73,17 +75,17 @@ Compare these two descriptions: "spacious rooms" versus "42 luxury suites averag
 
 ### Quotations (+38.5% visibility improvement)
 
-The percentage of AI responses mentioning your brand that also include direct quotes or testimonials nearby.
+The percentage of all tracked AI responses that contain a direct quote anywhere in the response.
 
-**What counts:** Text in quotation marks, or attribution phrases like "according to," "said," "stated," or "reported."
+**What counts:** Text inside double quotation marks, at least ten characters long. Attribution phrases on their own, like "according to" or "said", are not detected.
 
 **Why it matters:** Direct quotes add authenticity and trustworthiness. Guest reviews, press quotes, and expert testimonials give AI models concrete, attributable content to reference.
 
 ### Technical Terms (+18.6% visibility improvement)
 
-The average number of industry-specific terms found near your brand mentions per AI response.
+The average number of industry-specific terms found anywhere in an AI response, per response.
 
-**What counts:** Terms like "concierge," "all-inclusive," "infinity pool," "butler service," "Michelin," "eco-certified," and other hospitality vocabulary.
+**What counts:** A fixed list of sixteen hospitality terms, accommodation, amenities, concierge, reservation, occupancy, hospitality, boutique, luxury, UNESCO, Michelin, heritage, gastronomy, terroir, appellation, vineyard, château. Only these are counted, so phrases like "all-inclusive" or "infinity pool" will not move this number even though they are good copy.
 
 **Why it matters:** Industry-specific terminology signals authority and expertise. AI models trained on high-quality content associate technical language with authoritative sources.
 
@@ -107,7 +109,7 @@ Reference authoritative tourism boards, industry certifications, sustainability 
 
 ### Use industry terminology
 
-Replace generic language with hospitality terms. Instead of "nice rooms," write "luxury suites with turndown service." Instead of "good food," write "Michelin-recommended dining with half-board options."
+Replace generic language with hospitality terms, favouring the sixteen the platform counts. Instead of "nice rooms," write "luxury suites" or "boutique accommodation." Instead of "good food," write "Michelin-recommended gastronomy."
 
 ### Optimize content structure for AI
 

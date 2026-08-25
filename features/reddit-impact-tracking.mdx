@@ -14,7 +14,7 @@ Reddit Impact Tracking follows the full lifecycle of a Reddit post from publicat
 
 ### 1. You Post on Reddit
 
-You share helpful, authentic content in relevant subreddits -- answering questions about your destination, sharing local expertise, or contributing to travel discussions.
+You share helpful, authentic content in relevant subreddits, answering questions about your destination, sharing local expertise, or contributing to travel discussions.
 
 ### 2. AI Bots Discover It
 
@@ -26,17 +26,17 @@ When someone asks an AI a question related to your post, the AI may include your
 
 ### 4. We Detect the Citation
 
-The platform's tracking runs pick up these citations automatically. When an AI response references a Reddit thread you have flagged, we connect the dots and show you the full evidence chain.
+The platform's tracking runs pick up these citations automatically. When an AI response links to a Reddit thread you are watching, we connect the dots and show you the full evidence chain.
 
 ## What You See as Evidence
 
 For each detected Reddit citation, you get:
 
-- **The AI response** that cited your Reddit post, captured as a full screenshot
-- **The specific query** that triggered the AI to reference your content
-- **Which AI platform** used the citation (Google AI Overview, Perplexity, ChatGPT, etc.)
+- **The specific prompt** that triggered the AI to reference your content
+- **Which AI platforms** used the citation (Google AI Overview, Perplexity, ChatGPT, etc.)
 - **The Reddit thread** that was cited, with a direct link
-- **When it was detected**, so you can track how quickly posts get picked up
+- **How many times** it has been cited so far
+- **When it was first detected**, so you can track how quickly posts get picked up
 
 <Tip>
 Some Reddit posts get cited within days of being published. Others take weeks. The speed depends on subreddit activity, post engagement, and how relevant the content is to commonly asked questions.
@@ -46,12 +46,13 @@ Some Reddit posts get cited within days of being published. Others take weeks. T
 
 The platform detects Reddit citations through its regular tracking runs:
 
-- Every time we send your tracked keywords to AI platforms, we analyze the responses for all cited sources.
-- When a cited source is a Reddit URL matching a thread you have flagged, we tag it as a Reddit citation.
-- We also detect indirect citations -- cases where the AI clearly draws from Reddit content without directly linking to it.
+- Every time we send your tracked prompts to AI platforms, we analyze the responses for all cited sources.
+- When a cited source is a Reddit URL matching a post you are watching, we tag it as a Reddit citation.
+
+Detection works on the link itself. If an AI answer draws on Reddit without linking to the thread, we cannot see it.
 
 <Note>
-You do not need to track every Reddit post manually. Once you connect your Reddit activity to your workspace, we monitor for citations across all your tracked keywords automatically.
+There is no Reddit account to connect. Paste the URL of a Reddit post into Impact Tracking and we watch for citations of that thread across all your tracked prompts, on every run.
 </Note>
 
 ## Practical Tips for Effective Reddit Engagement
@@ -77,11 +78,10 @@ Never create fake accounts or astroturf Reddit discussions. This violates Reddit
 
 ## Measuring Reddit's Impact
 
-Over time, Reddit Impact Tracking shows you:
+Over time you can see:
 
-- Which subreddits produce the most AI citations
-- What types of posts get picked up fastest
-- How Reddit citations contribute to your overall Share of Voice
-- Whether Reddit-sourced mentions lead to website citations as well
+- Whether a given post has been cited, by which engines, and for which prompts
+- How quickly a post went from published to cited
+- Which subreddits produce the most AI citations, from the **Top Reddit Communities Being Cited** panel on the Conversations tab of your Weekly Analysis report
 
 This data helps you focus your community engagement efforts where they have the greatest impact on AI visibility.

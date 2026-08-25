@@ -10,62 +10,56 @@ When someone asks an AI platform a question, the AI may send a bot to your websi
 
 ## Why This Matters
 
-You can only track keywords you already know about. But travelers ask AI platforms thousands of questions you have never thought to monitor. Inferred Search Prompts uncovers these hidden queries so you can:
+You can only track prompts you already know about. But travelers ask AI platforms thousands of questions you have never thought to monitor. Inferred Search Prompts uncovers these hidden queries so you can:
 
-- Discover new keywords worth tracking
+- Discover new prompts worth tracking
 - Understand what travelers actually want to know about your destination
 - Spot emerging trends in traveler intent before competitors do
-- Fill gaps in your keyword tracking strategy
+- Fill gaps in your prompt tracking strategy
 
-## The Three Inference Methods
+## How Prompts Are Inferred
 
-The platform uses three complementary techniques to infer what users asked:
+The platform works from the URL a bot requested, using three techniques in order of reliability:
 
-### Keyword Correlation
+### Prompt matching
 
-When a bot visits your website at the same time a tracked keyword triggers an AI response mentioning your brand, we correlate the two events. This gives us high confidence about which query drove the visit.
+We compare the URL a bot requested, its path, query string and page title, against the prompts you already track. A strong word overlap means we can name the likely prompt with high confidence.
 
-For example, if someone asks an AI "best spa hotels in Bali" and a bot visits your spa page seconds later, we can infer the connection.
+For example, a bot requesting `/spa/thermal-baths` on a workspace already tracking "best spa hotels in Bali" is a strong match.
 
-### URL Pattern Analysis
+### AI reasoning
 
-Different types of pages attract different types of questions. By analyzing which pages bots visit, we can infer the category and intent of the original query:
+When no tracked prompt matches, we ask an AI model to read the URL and infer the question a real traveller would have asked to end up on that page. These are educated guesses, so they are capped at 75% confidence however plausible they look.
 
-- Bot visits your "/rooms/presidential-suite" page -- likely a query about luxury accommodations
-- Bot visits your "/dining/restaurant-name" page -- likely a query about restaurants in your area
-- Bot visits your "/blog/best-time-to-visit" page -- likely a seasonal travel planning question
+### Page topic analysis
 
-### Content Fingerprinting
+Where we have the page title and body content, we extract its main topic and phrase it as a question. This is the weakest signal and is used only when the other two produce nothing.
 
-When an AI response includes specific facts, descriptions, or details that match content on your website, we can trace those details back to the source page. This helps identify which of your content was used to answer a particular type of question, even when the bot visit happened hours or days earlier.
+<Note>
+Inference is based on which page was requested, not on timing. We do not correlate a bot visit
+against the moment a tracked prompt produced an AI answer, and we do not match facts in an AI
+response back to your page.
+</Note>
 
-## Confidence Levels
+## Confidence
 
-Not all inferences are equally reliable. Each inferred prompt comes with a confidence level:
+Every inferred prompt carries a confidence percentage, shown as a badge next to it:
 
-<AccordionGroup>
-  <Accordion title="High Confidence">
-    Strong time correlation between a bot visit and a tracked query, with matching content between your page and the AI response. These inferences are very likely accurate.
-  </Accordion>
+- **80% and above** (green), a strong match against a prompt you already track
+- **60-79%** (amber), a reasonable match, worth validating
+- **Below 60%** (grey), treat as a brainstorming prompt, not a finding
 
-  <Accordion title="Medium Confidence">
-    Good pattern match based on URL analysis and content overlap, but without a precise time correlation. These are probably accurate but should be validated by adding them to your tracked keywords.
-  </Accordion>
-
-  <Accordion title="Low Confidence">
-    Based primarily on page category and general content analysis. These represent educated guesses and are best used as inspiration for keyword research rather than taken at face value.
-  </Accordion>
-</AccordionGroup>
+Anything scoring under 30% is discarded and never shown to you.
 
 <Tip>
-Focus on high and medium confidence prompts first. Add them to your tracked keywords to start collecting hard data. Low confidence prompts are useful for brainstorming but should be verified before acting on them.
+Focus on the green ones first. Add them to your tracked prompts to start collecting hard data. The lower-confidence ones are useful for brainstorming but should be verified before acting on them.
 </Tip>
 
 ## How to Use Inferred Prompts
 
-### Discover New Keywords to Track
+### Discover New Prompts to Track
 
-The most immediate use is expanding your keyword list. When you see inferred prompts with high confidence that you are not already tracking, add them. You may find entire categories of traveler questions you were not monitoring.
+The most immediate use is expanding your prompt list. When you see inferred prompts with high confidence that you are not already tracking, add them. You may find entire categories of traveler questions you were not monitoring.
 
 ### Identify Content Gaps
 
@@ -81,8 +75,8 @@ Watch for patterns in inferred prompts over time:
 
 ### Validate with Tracking
 
-The best way to confirm an inferred prompt is to add it to your tracked keywords. Within one or two tracking runs, you will have real data showing whether AI platforms mention you for that query.
+The best way to confirm an inferred prompt is to add it to your tracked prompts. Within one or two tracking runs, you will have real data showing whether AI platforms mention you for it.
 
 <Note>
-Inferred Search Prompts requires Crawler Analytics to be active. The inference engine needs bot visit data to work. See [Crawler Analytics](/features/crawler-analytics) for setup details.
+Inferred Search Prompts requires Crawler Analytics to be active, because the inference engine needs bot visit data to work. Crawler Analytics is included on the Professional plan, or available as an add-on on any plan. See [Crawler Analytics](/features/crawler-analytics) for setup details.
 </Note>

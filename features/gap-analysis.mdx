@@ -8,28 +8,37 @@ The Competitive Gap Analysis answers one straightforward question: **When someon
 
 ## The Core Concept: Wins vs. Losses
 
-Every time a tracking run executes, your prompts are sent to multiple AI engines (ChatGPT, Gemini, Perplexity, Google AI). Each response is then evaluated:
+Every time a tracking run executes, your prompts are sent to the AI engines your plan includes (ChatGPT, Claude, Perplexity, Gemini, Google AI Overview and Google AI Mode). Each response is then evaluated:
 
-- **Win (Mentioned)** - AI mentioned your brand in its answer
-- **Loss (Not Mentioned)** - AI did not mention your brand. It mentioned competitors or other brands instead
+- **Win** - you were the most-cited brand in the AI answer
+- **Loss** - a competitor or other brand was the most-cited. You may still have been mentioned
 
-The analysis then determines **why** you won or lost in each case.
+The analysis then determines **why** you won or lost in each case. Note that a loss does not
+mean you were invisible: the briefing splits losses into "appeared, lost" and "absent".
 
 ---
 
 ## What You See
 
-### Win Rate
+### Win Rate (shown in your Executive Briefing)
 
-Your headline metric showing how often AI mentions your brand across all analyzed prompts.
+A win is stricter than a mention. You "win" a prompt only when you were the most-cited brand in
+that AI answer. Showing up but losing to a competitor is counted separately.
 
 | Metric | What It Means |
 |--------|---------------|
-| **Mentioned** (green) | Number of prompts where AI mentioned your brand |
-| **Not Mentioned** (red) | Number of prompts where AI did not mention your brand |
-| **Win Rate** | Mentioned divided by Total, shown as a percentage |
+| **Top answer** (green) | Prompts where you were the most-cited brand in the AI answer |
+| **Appeared, lost** (amber) | Prompts where you showed up but a competitor was the top brand |
+| **Absent** (red) | Prompts where you did not show up at all |
+| **Win Rate** | Top answer divided by prompts analysed |
+| **Appearance Rate** | (Top answer + Appeared, lost) divided by prompts analysed |
 
-**Example:** Out of 14 analyzed prompts, your brand was mentioned in 11 responses and missing from 3. That is a 78.6% win rate.
+**Example:** Out of 14 analysed prompts you were the top answer on 6, appeared but lost on 5, and were absent on 3. That is a 42.9% win rate and a 78.6% appearance rate.
+
+<Note>
+These totals live in the Executive Briefing. The Gap Analysis page itself shows the per-prompt
+breakdown, why you won or lost each one, plus the cost and runtime of the analysis.
+</Note>
 
 ### Why You Win
 
@@ -63,7 +72,7 @@ Every tracking run sends your prompts to multiple AI engines and captures the fu
 
 ### The most valuable responses are selected for deep analysis
 
-The system prioritizes responses where competitors beat you, followed by emerging market opportunities, and then your wins. Every prompt gets at least one analysis so nothing is skipped entirely.
+The system prioritizes responses where competitors beat you, followed by emerging market opportunities, and then your wins. Each run covers as many distinct prompts as it can, around 36, so a large prompt set builds up coverage over successive runs rather than all at once.
 
 ### Each response is analyzed for patterns
 

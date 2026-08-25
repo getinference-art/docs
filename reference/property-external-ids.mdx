@@ -64,6 +64,18 @@ Your property's identifier in the OpenStreetMap database (e.g., node/12345678 or
 Even if you do not have an OSM ID, adding your Google Place ID and website URL covers the most important detection scenarios. OSM provides additional geographic precision but is not required.
 </Tip>
 
+### OTA listing IDs
+
+Four marketplace identifiers, shown on hotel and resort properties.
+
+- **Booking.com hotel ID**, from your extranet URL: `.../hotel/.../<HOTEL_ID>.html`
+- **Expedia property ID**, from your Expedia extranet URL
+- **Hotels.com hotel ID**, from your Hotels.com listing URL
+- **TripAdvisor location ID**, from your listing URL: `.../Hotel_Review-g<city>-d<LOCATION_ID>-Reviews-...`
+
+**What they enable:**
+- The matching per-marketplace audit in Listing Audits
+
 ### Wikidata ID
 
 Your property's identifier in Wikidata, the structured data backend of Wikipedia (e.g., Q12345).
@@ -72,15 +84,26 @@ Your property's identifier in Wikidata, the structured data backend of Wikipedia
 - Matching with knowledge graph information AI platforms use
 - Detection when AI responses draw from Wikipedia-sourced data
 
+<Note>
+Travel workspaces do not have a Wikidata field on the property form today, their External IDs
+section covers Google, OpenStreetMap and the OTA identifiers. This field appears on generic and
+media workspaces. If a Wikidata ID is already stored against your property it is still used for
+citation matching.
+</Note>
+
 ## Summary
 
 | Identifier | Priority | Primary Use |
 |------------|----------|-------------|
-| **Website** | Required | Citation detection in AI responses |
+| **Website** | Strongly recommended | Citation detection in AI responses |
 | **Google Place ID** | Highly recommended | Map result detection in AI Mode and AI Overviews |
 | **Google Maps CID** | Recommended | Backup Google Maps matching |
 | **OSM ID** | Optional | Geographic coordinates and location matching |
-| **Wikidata ID** | Optional | Knowledge graph matching |
+| **Booking.com / Expedia / Hotels.com / TripAdvisor IDs** | Optional | Unlock the matching audit in Listing Audits |
+| **Wikidata ID** | Optional, not on travel workspaces | Knowledge graph matching |
+
+Only Business Name and Type are enforced as required by the form. Website is not technically
+mandatory, but citation detection cannot work without it, so treat it as required in practice.
 
 ## Map Detection in AI Responses
 

@@ -15,7 +15,7 @@ These are the two most important fields when adding a property.
 - **Website** is how the system recognizes your brand in AI answers. When an AI platform cites a source or links to a website in its response, the platform checks whether that link matches your property's website. This is the primary way citations are detected.
 
 <Note>
-  Make sure the website URL you enter matches what AI platforms are likely to link to. For example, if your hotel's main page is `www.grandhotel.com`, use that — not a sub-page like `www.grandhotel.com/rooms`.
+  Make sure the website URL you enter matches what AI platforms are likely to link to. For example, if your hotel's main page is `www.grandhotel.com`, use that, not a sub-page like `www.grandhotel.com/rooms`.
 </Note>
 
 ### Google Business Place ID and CID
@@ -35,12 +35,23 @@ When Google AI Mode or AI Overviews display a map with recommended places, the p
 
 The OpenStreetMap (OSM) ID is used to automatically look up your property's GPS coordinates. This helps the platform understand your property's geographic context when analyzing location-based AI results.
 
-### Other Fields
+### OTA listing IDs
 
-Apple Business ID and Wikidata ID are available for reference but are not currently used by the tracking system. You can leave these blank.
+If your property is listed on the big travel marketplaces, add those IDs too:
+
+- **Booking.com hotel ID**, found in your Booking.com extranet URL: `.../hotel/.../<HOTEL_ID>.html`
+- **Expedia property ID**, found in your Expedia extranet URL
+- **Hotels.com hotel ID**, found in your Hotels.com listing URL
+- **TripAdvisor location ID**, found in your TripAdvisor listing URL: `.../Hotel_Review-g<city>-d<LOCATION_ID>-Reviews-...`
+
+Each of these unlocks the matching audit in Listing Audits. The help text under each field in the form repeats where to find the ID.
+
+### Sitemap URL (optional)
+
+Leave this blank and we discover your sitemap from the website URL above. Fill it in only if discovery fails, or if you maintain your sitemap at a non-standard path.
 
 ## Adding a Property
 
-From your workspace, navigate to the Properties section and click **Add Property**. Fill in the name, website, and as many of the Google identifiers as you have available, then save.
+From your workspace, navigate to the Properties section and click **Add property**. Fill in the business name, type, website, and as many of the Google identifiers as you have available, then click **Add Business**.
 
-You can add as many properties as you need — whether you are tracking a single boutique hotel or dozens of locations across a hotel group.
+How many properties you can add depends on your plan: Starter includes 1, Agency 10 and Professional 30. The pricing page carries the current allowance, and you can buy extra property slots as an add-on if you need more without changing plan.
