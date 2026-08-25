@@ -8,22 +8,51 @@ icon: "robot"
 
 Before AI platforms can recommend you, their bots need to visit your website and understand your content. Crawler Analytics shows you exactly which AI bots are visiting, what pages they look at, and how often they come back.
 
-## Which Bots Are Detected
+## Two Very Different Kinds of AI Visit
 
-The platform identifies and tracks all major AI crawlers:
+Most analytics lump every AI bot together. The platform does not, because the two
+kinds mean opposite things for your business.
+
+### User-initiated visits: a real person is asking about you right now
+
+These fetches happen because a human asked an AI assistant a question and the
+assistant went to read your page to answer it. They are real-time demand, so they
+are weighted 3x in your analytics.
+
+| Agent | Operated By | What it means |
+|-------|-------------|---------------|
+| **ChatGPT-User** | OpenAI | Someone asked ChatGPT and it opened your page |
+| **Claude-User** / **Claude-Web** | Anthropic | Someone asked Claude and it opened your page |
+| **Perplexity-User** | Perplexity | Someone asked Perplexity and it opened your page |
+| **CopilotBot** | Microsoft | Someone asked Copilot and it opened your page |
+| **MistralAI-User** | Mistral | Someone asked Le Chat and it opened your page |
+| **DuckAssistBot** | DuckDuckGo | Someone used DuckDuckGo's assistant |
+| **NotebookLM** | Google | Someone added your page to a NotebookLM notebook |
+
+### Training and index crawlers: a machine is collecting content
+
+These bots are building or refreshing a model or an index. Nobody is waiting on
+an answer. They still matter, because a model that never reads your site cannot
+recommend it, but they are not demand.
 
 | Bot | Operated By | Purpose |
 |-----|-------------|---------|
-| **GPTBot** | OpenAI | Powers ChatGPT responses |
-| **ClaudeBot** | Anthropic | Powers Claude responses |
-| **PerplexityBot** | Perplexity | Powers Perplexity search answers |
+| **GPTBot** | OpenAI | Collects content for training. Not the bot that answers a live question |
+| **ClaudeBot** | Anthropic | Collects content for training |
+| **PerplexityBot** | Perplexity | Builds Perplexity's search index |
 | **GoogleOther** | Google | Used for AI Overview generation |
 | **Google-Extended** | Google | Gemini and AI training |
 | **Bytespider** | ByteDance | AI content indexing |
 | **CCBot** | Common Crawl | Open dataset used by many AI models |
 
+### Humans arriving from an AI answer
+
+A third class: a normal browser carrying a referrer from an AI surface. That is a
+real visitor who clicked a citation in an AI answer and landed on your site.
+
 <Tip>
-New AI crawlers appear regularly. The platform continuously updates its detection library so you do not miss visits from emerging AI platforms.
+New AI crawlers appear regularly. The platform continuously updates its detection
+library so you do not miss visits from emerging AI platforms.
 </Tip>
 
 ## What You Learn
